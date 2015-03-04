@@ -9,16 +9,27 @@
 import UIKit
 
 class MainOptionController: UIViewController {
-    
+        
     @IBOutlet weak var superButton: UIButton!
     @IBOutlet weak var subButton: UIButton!
 
     override func loadView() {
         super.loadView()
+        self.navigationController?.navigationBar.barTintColor = Colors.Purple.toColor()
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.translucent = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = Colors.Purple.toColor()
+        superButton.setImage(UIImage(named: "SuperIcon")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState: UIControlState.Normal)
+        superButton.tintColor = UIColor.whiteColor()
+        superButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        subButton.setImage(UIImage(named: "SubIcon")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), forState: UIControlState.Normal)
+        subButton.tintColor = UIColor.whiteColor()
+        // TODO: Change tint color to a gold color
+        subButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         self.view.addConstraint(NSLayoutConstraint(item: superButton, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: -12.0))
         self.view.addConstraint(NSLayoutConstraint(item: subButton, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: -18.0))
     }
@@ -35,15 +46,5 @@ class MainOptionController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

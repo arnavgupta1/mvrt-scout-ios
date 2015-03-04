@@ -32,8 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax0-A0-Ish">
-                                <rect key="frame" x="41" y="280" width="519" height="280"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax0-A0-Ish">
+                                <rect key="frame" x="45" y="324" width="511" height="280"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <inset key="contentEdgeInsets" minX="70" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="titleEdgeInsets" minX="-352" minY="0.0" maxX="0.0" maxY="-267"/>
@@ -46,8 +46,8 @@
                                     <segue destination="5ac-sY-VhC" kind="show" id="ldP-iL-GPe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-Eb-HiL">
-                                <rect key="frame" x="12" y="0.0" width="576" height="280"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-Eb-HiL">
+                                <rect key="frame" x="12" y="44" width="576" height="280"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
                                 <inset key="contentEdgeInsets" minX="103" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="titleEdgeInsets" minX="-380" minY="0.0" maxX="0.0" maxY="-267"/>
@@ -57,7 +57,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="show" id="KN7-qj-f9l"/>
+                                    <segue destination="5hg-vi-YQo" kind="show" id="jSP-V9-0Ft"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -87,24 +87,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8R3-qb-gTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-449" y="379"/>
+            <point key="canvasLocation" x="-503" y="368"/>
         </scene>
-        <!--Super Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Scouting Data-->
+        <scene sceneID="eFT-m5-fx2">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SuperController" customModule="MVRTScouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Scouting Data" id="Fqe-Oo-WkY" customClass="SuperScoutingDataController" customModule="MVRTScouting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="koZ-c8-ty0"/>
+                        <viewControllerLayoutGuide type="bottom" id="1PA-h2-u0N"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="Hqb-NI-Qh8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="YpU-v6-2KS"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHQ-bx-6dD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1150" y="312"/>
+        </scene>
+        <!--Stand Scouting-->
+        <scene sceneID="It6-rB-FKK">
+            <objects>
+                <viewController title="Stand Scouting" id="iIR-Qs-4Q0" customClass="SuperStandScoutingController" customModule="MVRTScouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GNK-07-1Wm"/>
+                        <viewControllerLayoutGuide type="bottom" id="0h3-Zh-xCh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oyl-9M-O3x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Ioc-en-rRY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2B-DK-4rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1216" y="-356"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Npr-V1-Vf0">
+            <objects>
+                <tabBarController id="5hg-vi-YQo" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="a5F-PI-bzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iIR-Qs-4Q0" kind="relationship" relationship="viewControllers" id="w4n-P3-9Br"/>
+                        <segue destination="Fqe-Oo-WkY" kind="relationship" relationship="viewControllers" id="6qq-VJ-wv3"/>
+                        <segue destination="B5d-A3-B2i" kind="relationship" relationship="viewControllers" id="D0a-1L-Be0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZ7-JW-GBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="204" y="273"/>
         </scene>
         <!--Sub Controller-->
         <scene sceneID="i1z-JL-Jev">
@@ -122,7 +163,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nfa-bv-vgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="1005"/>
+            <point key="canvasLocation" x="-584" y="1193"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="IV7-aN-tj5">
+            <objects>
+                <viewController title="Settings" id="B5d-A3-B2i" customClass="SuperSettingsController" customModule="MVRTScouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Qrz-3S-dc8"/>
+                        <viewControllerLayoutGuide type="bottom" id="uFP-eT-bCD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="g6y-vY-yMM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="D0r-zl-yfg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ot-Fa-ozZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="941" y="1121"/>
         </scene>
     </scenes>
     <resources>
