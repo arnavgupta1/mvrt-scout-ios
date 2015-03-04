@@ -1,13 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7519.1" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QCN-sB-Iew">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7513.1"/>
     </dependencies>
     <scenes>
+        <!--Main Option Controller-->
+        <scene sceneID="OGJ-HJ-mZC">
+            <objects>
+                <viewController id="QCN-sB-Iew" customClass="MainOptionController" customModule="MVRTScouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OQh-bt-fmi"/>
+                        <viewControllerLayoutGuide type="bottom" id="0gR-bK-Sxo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gVE-rZ-ZqX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-Eb-HiL">
+                                <rect key="frame" x="155" y="40" width="290" height="83"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                <state key="normal" title="Superscout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax0-A0-Ish">
+                                <rect key="frame" x="179" y="163" width="242" height="83"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
+                                <state key="normal" title="Subscout">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="PGX-Eb-HiL" secondAttribute="centerX" id="3Ws-Z1-ihG"/>
+                            <constraint firstAttribute="centerX" secondItem="Ax0-A0-Ish" secondAttribute="centerX" id="QQa-pp-RFd"/>
+                            <constraint firstItem="PGX-Eb-HiL" firstAttribute="top" secondItem="OQh-bt-fmi" secondAttribute="bottom" constant="20" id="aK2-ME-5is"/>
+                            <constraint firstItem="Ax0-A0-Ish" firstAttribute="top" secondItem="PGX-Eb-HiL" secondAttribute="bottom" constant="20" id="arE-gm-dmC"/>
+                            <constraint firstItem="Ax0-A0-Ish" firstAttribute="top" secondItem="PGX-Eb-HiL" secondAttribute="bottom" constant="40" id="mHt-4o-wVU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="arE-gm-dmC"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="subButton" destination="Ax0-A0-Ish" id="sIR-mA-UWB"/>
+                        <outlet property="superButton" destination="PGX-Eb-HiL" id="No0-nb-UL1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8R3-qb-gTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-449" y="379"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MVRTScouting" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
