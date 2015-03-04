@@ -15,14 +15,12 @@ class MainOptionController: UIViewController {
 
     override func loadView() {
         super.loadView()
-        superButton.setImage(UIImage(named: "SuperIcon")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), forState: UIControlState.Normal)
-        superButton.titleEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, 100.0, 0.0)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.addConstraint(NSLayoutConstraint(item: superButton, attribute: NSLayoutAttribute.Bottom, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: -12.0))
+        self.view.addConstraint(NSLayoutConstraint(item: subButton, attribute: NSLayoutAttribute.Top, relatedBy: NSLayoutRelation.Equal, toItem: self.view, attribute: NSLayoutAttribute.CenterY, multiplier: 1.0, constant: -18.0))
     }
 
     override func didReceiveMemoryWarning() {

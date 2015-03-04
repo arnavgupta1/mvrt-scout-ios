@@ -16,17 +16,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-Eb-HiL">
-                                <rect key="frame" x="155" y="40" width="290" height="83"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
-                                <state key="normal" title="Superscout">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGX-Eb-HiL">
+                                <rect key="frame" x="12" y="0.0" width="576" height="280"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <inset key="contentEdgeInsets" minX="103" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="-380" minY="0.0" maxX="0.0" maxY="-267"/>
+                                <inset key="imageEdgeInsets" minX="44" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Superscout" image="SuperIcon">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax0-A0-Ish">
-                                <rect key="frame" x="179" y="163" width="242" height="83"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="60"/>
-                                <state key="normal" title="Subscout">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ax0-A0-Ish">
+                                <rect key="frame" x="41" y="280" width="519" height="280"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="40"/>
+                                <inset key="contentEdgeInsets" minX="70" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="-352" minY="0.0" maxX="0.0" maxY="-267"/>
+                                <inset key="imageEdgeInsets" minX="44" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Subscout" image="SubIcon">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -34,13 +42,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="PGX-Eb-HiL" secondAttribute="centerX" id="3Ws-Z1-ihG"/>
+                            <constraint firstAttribute="centerY" secondItem="PGX-Eb-HiL" secondAttribute="centerY" constant="90" id="DhH-co-eem"/>
                             <constraint firstAttribute="centerX" secondItem="Ax0-A0-Ish" secondAttribute="centerX" id="QQa-pp-RFd"/>
-                            <constraint firstItem="PGX-Eb-HiL" firstAttribute="top" secondItem="OQh-bt-fmi" secondAttribute="bottom" constant="20" id="aK2-ME-5is"/>
+                            <constraint firstItem="PGX-Eb-HiL" firstAttribute="width" secondItem="gVE-rZ-ZqX" secondAttribute="width" id="WNt-FB-Z54"/>
+                            <constraint firstItem="PGX-Eb-HiL" firstAttribute="top" secondItem="OQh-bt-fmi" secondAttribute="bottom" constant="-20" placeholder="YES" id="aK2-ME-5is"/>
                             <constraint firstItem="Ax0-A0-Ish" firstAttribute="top" secondItem="PGX-Eb-HiL" secondAttribute="bottom" constant="20" id="arE-gm-dmC"/>
-                            <constraint firstItem="Ax0-A0-Ish" firstAttribute="top" secondItem="PGX-Eb-HiL" secondAttribute="bottom" constant="40" id="mHt-4o-wVU"/>
+                            <constraint firstItem="Ax0-A0-Ish" firstAttribute="top" secondItem="PGX-Eb-HiL" secondAttribute="bottom" placeholder="YES" id="mHt-4o-wVU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="DhH-co-eem"/>
+                                <exclude reference="WNt-FB-Z54"/>
                                 <exclude reference="arE-gm-dmC"/>
                             </mask>
                         </variation>
@@ -72,4 +84,8 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="SubIcon" width="280" height="280"/>
+        <image name="SuperIcon" width="280" height="280"/>
+    </resources>
 </document>
