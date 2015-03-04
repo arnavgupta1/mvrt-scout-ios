@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D95EFAC81AA148F300748F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EFAC71AA148F300748F34 /* AppDelegate.swift */; };
-		D95EFACA1AA148F300748F34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EFAC91AA148F300748F34 /* ViewController.swift */; };
+		D95EFACA1AA148F300748F34 /* SuperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EFAC91AA148F300748F34 /* SuperController.swift */; };
 		D95EFACD1AA148F300748F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95EFACB1AA148F300748F34 /* Main.storyboard */; };
 		D95EFACF1AA148F300748F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95EFACE1AA148F300748F34 /* Images.xcassets */; };
 		D95EFAD21AA148F300748F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95EFAD01AA148F300748F34 /* LaunchScreen.xib */; };
 		D95EFADE1AA148F300748F34 /* MVRTScoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EFADD1AA148F300748F34 /* MVRTScoutingTests.swift */; };
 		D9C711A51AA67D2D0092695F /* MainOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711A41AA67D2D0092695F /* MainOptionController.swift */; };
+		D9C711A71AA6907D0092695F /* SubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711A61AA6907D0092695F /* SubController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +31,7 @@
 		D95EFAC21AA148F300748F34 /* MVRTScouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVRTScouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95EFAC61AA148F300748F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95EFAC71AA148F300748F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D95EFAC91AA148F300748F34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D95EFAC91AA148F300748F34 /* SuperController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperController.swift; sourceTree = "<group>"; };
 		D95EFACC1AA148F300748F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D95EFACE1AA148F300748F34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D95EFAD11AA148F300748F34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -38,6 +39,7 @@
 		D95EFADC1AA148F300748F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95EFADD1AA148F300748F34 /* MVRTScoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVRTScoutingTests.swift; sourceTree = "<group>"; };
 		D9C711A41AA67D2D0092695F /* MainOptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainOptionController.swift; sourceTree = "<group>"; };
+		D9C711A61AA6907D0092695F /* SubController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				D95EFAC71AA148F300748F34 /* AppDelegate.swift */,
-				D95EFAC91AA148F300748F34 /* ViewController.swift */,
+				D95EFAC91AA148F300748F34 /* SuperController.swift */,
+				D9C711A61AA6907D0092695F /* SubController.swift */,
 				D9C711A41AA67D2D0092695F /* MainOptionController.swift */,
 				D95EFACB1AA148F300748F34 /* Main.storyboard */,
 				D95EFACE1AA148F300748F34 /* Images.xcassets */,
@@ -215,8 +218,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C711A71AA6907D0092695F /* SubController.swift in Sources */,
 				D9C711A51AA67D2D0092695F /* MainOptionController.swift in Sources */,
-				D95EFACA1AA148F300748F34 /* ViewController.swift in Sources */,
+				D95EFACA1AA148F300748F34 /* SuperController.swift in Sources */,
 				D95EFAC81AA148F300748F34 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
