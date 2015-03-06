@@ -131,9 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				D9D11AAD1AA91BFB005106D3 /* SuperOptionsController.swift */,
-				D9C711A91AA695BD0092695F /* SuperSettingsController.swift */,
 				D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */,
 				D9C711AD1AA696110092695F /* SuperScoutingDataController.swift */,
+				D9C711A91AA695BD0092695F /* SuperSettingsController.swift */,
 			);
 			name = SuperControllers;
 			sourceTree = "<group>";

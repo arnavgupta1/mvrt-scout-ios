@@ -9,27 +9,23 @@
 import UIKit
 
 class SuperStandScoutingController: UIViewController {
+    
+    @IBOutlet weak var startButton: UIButton!
 
+    override func loadView() {
+        super.loadView()
+        startButton.backgroundColor = Colors.Purple.toColor()
+        startButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        startButton.layer.cornerRadius = 10.0
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
