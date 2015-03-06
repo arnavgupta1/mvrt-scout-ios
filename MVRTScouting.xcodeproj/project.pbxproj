@@ -18,6 +18,7 @@
 		D9C711AC1AA695FC0092695F /* SuperStandScoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */; };
 		D9C711AE1AA696110092695F /* SuperScoutingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AD1AA696110092695F /* SuperScoutingDataController.swift */; };
 		D9C711B01AA696AD0092695F /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AF1AA696AD0092695F /* ColorScheme.swift */; };
+		D9D11AAE1AA91BFB005106D3 /* SuperOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D11AAD1AA91BFB005106D3 /* SuperOptionsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperStandScoutingController.swift; sourceTree = "<group>"; };
 		D9C711AD1AA696110092695F /* SuperScoutingDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperScoutingDataController.swift; sourceTree = "<group>"; };
 		D9C711AF1AA696AD0092695F /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
+		D9D11AAD1AA91BFB005106D3 /* SuperOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperOptionsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 		D9C711A81AA695A00092695F /* SuperControllers */ = {
 			isa = PBXGroup;
 			children = (
+				D9D11AAD1AA91BFB005106D3 /* SuperOptionsController.swift */,
 				D9C711A91AA695BD0092695F /* SuperSettingsController.swift */,
 				D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */,
 				D9C711AD1AA696110092695F /* SuperScoutingDataController.swift */,
@@ -241,6 +244,7 @@
 				D9C711B01AA696AD0092695F /* ColorScheme.swift in Sources */,
 				D9C711AE1AA696110092695F /* SuperScoutingDataController.swift in Sources */,
 				D9C711A51AA67D2D0092695F /* MainOptionController.swift in Sources */,
+				D9D11AAE1AA91BFB005106D3 /* SuperOptionsController.swift in Sources */,
 				D95EFAC81AA148F300748F34 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

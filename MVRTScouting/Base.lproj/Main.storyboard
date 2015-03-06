@@ -57,7 +57,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5hg-vi-YQo" kind="show" id="jSP-V9-0Ft"/>
+                                    <segue destination="0W5-gG-vwe" kind="show" id="IX5-iT-oYV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -106,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHQ-bx-6dD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1150" y="312"/>
+            <point key="canvasLocation" x="1674" y="248"/>
         </scene>
         <!--Stand Scouting-->
         <scene sceneID="It6-rB-FKK">
@@ -125,7 +125,81 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k2B-DK-4rf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1216" y="-356"/>
+            <point key="canvasLocation" x="1668" y="-632"/>
+        </scene>
+        <!--Super Options Controller-->
+        <scene sceneID="Wp0-EB-Hun">
+            <objects>
+                <viewController id="0W5-gG-vwe" customClass="SuperOptionsController" customModule="MVRTScouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nf1-s0-isG"/>
+                        <viewControllerLayoutGuide type="bottom" id="zhk-sp-xtz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5yh-rr-sfc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTS-bp-cGn">
+                                <rect key="frame" x="69" y="235" width="463" height="130"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="153" minY="-30" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="-313" minY="0.0" maxX="0.0" maxY="-158"/>
+                                <state key="normal" title="Pit Scouting" image="PitIcon">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="74s-ld-cAs">
+                                <rect key="frame" x="31" y="445" width="538" height="75"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="205" minY="-65" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="-357" minY="0.0" maxX="0.0" maxY="-168"/>
+                                <inset key="imageEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Stand Scouting" image="BluetoothIcon">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3v-pr-Mhc">
+                                <rect key="frame" x="8" y="101" width="585" height="95"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <inset key="contentEdgeInsets" minX="232" minY="-65" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="-382" minY="0.0" maxX="0.0" maxY="-170"/>
+                                <inset key="imageEdgeInsets" minX="-15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Stand Scouting" image="StandIcon">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5hg-vi-YQo" kind="show" id="mpG-mh-HZN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="eTS-bp-cGn" secondAttribute="centerY" id="Cnj-68-lJV"/>
+                            <constraint firstItem="eTS-bp-cGn" firstAttribute="top" secondItem="S3v-pr-Mhc" secondAttribute="bottom" constant="39" id="QMD-wt-KRf"/>
+                            <constraint firstAttribute="centerX" secondItem="eTS-bp-cGn" secondAttribute="centerX" id="XY6-iE-UzX"/>
+                            <constraint firstItem="74s-ld-cAs" firstAttribute="top" secondItem="eTS-bp-cGn" secondAttribute="bottom" constant="80" id="gvf-d8-kfi"/>
+                            <constraint firstItem="S3v-pr-Mhc" firstAttribute="centerX" secondItem="eTS-bp-cGn" secondAttribute="centerX" id="klu-uW-lye"/>
+                            <constraint firstItem="74s-ld-cAs" firstAttribute="centerX" secondItem="eTS-bp-cGn" secondAttribute="centerX" id="muJ-Xo-5MP"/>
+                            <constraint firstItem="S3v-pr-Mhc" firstAttribute="centerX" secondItem="eTS-bp-cGn" secondAttribute="centerX" id="roE-cu-Lic"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="roE-cu-Lic"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="bluetoothButton" destination="74s-ld-cAs" id="KmM-Gr-NB3"/>
+                        <outlet property="pitButton" destination="eTS-bp-cGn" id="W14-r2-W5B"/>
+                        <outlet property="standButton" destination="S3v-pr-Mhc" id="pnd-jZ-KBA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0u-tc-lyK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="292" y="618"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Npr-V1-Vf0">
@@ -145,7 +219,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZ7-JW-GBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="273"/>
+            <point key="canvasLocation" x="976" y="157"/>
         </scene>
         <!--Sub Controller-->
         <scene sceneID="i1z-JL-Jev">
@@ -182,10 +256,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1ot-Fa-ozZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="1121"/>
+            <point key="canvasLocation" x="1765" y="1081"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BluetoothIcon" width="140" height="140"/>
+        <image name="PitIcon" width="160" height="160"/>
+        <image name="StandIcon" width="160" height="160"/>
         <image name="SubIcon" width="280" height="280"/>
         <image name="SuperIcon" width="280" height="280"/>
     </resources>
