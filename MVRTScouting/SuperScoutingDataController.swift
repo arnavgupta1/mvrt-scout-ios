@@ -10,6 +10,11 @@ import UIKit
 
 class SuperScoutingDataController: UIViewController {
     
+    @IBOutlet weak var SearchBar: UISearchBar!
+    @IBOutlet weak var SearchResults: UITableView!
+    
+    //You need to make the search database be based on all the results in Firebase.
+    
     override func loadView() {
         super.loadView()
     }
