@@ -17,7 +17,7 @@ class SuperStandScoutingController: UIViewController {
     @IBOutlet weak var teamTres: UITextField!
     
     @IBAction func OnClick(sender: AnyObject) {
-        //collect text from the boxes and segue to the actual scouting page
+        //collect text from the boxes and send via bluetooth to respective subscouts
         
     }
     

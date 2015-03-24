@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35F124551AC0EE6300643E30 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F124541AC0EE6300643E30 /* Firebase.framework */; };
+		35F124571AC0EF0F00643E30 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F124561AC0EF0F00643E30 /* libicucore.dylib */; };
+		35F124591AC0EF1F00643E30 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F124581AC0EF1F00643E30 /* libc++.dylib */; };
+		35F1245B1AC0EF2900643E30 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F1245A1AC0EF2900643E30 /* CFNetwork.framework */; };
+		35F1245D1AC0EF3500643E30 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F1245C1AC0EF3500643E30 /* Security.framework */; };
+		35F1245F1AC0EF4100643E30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F1245E1AC0EF4100643E30 /* SystemConfiguration.framework */; };
 		D95EFAC81AA148F300748F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EFAC71AA148F300748F34 /* AppDelegate.swift */; };
 		D95EFACD1AA148F300748F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95EFACB1AA148F300748F34 /* Main.storyboard */; };
 		D95EFACF1AA148F300748F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95EFACE1AA148F300748F34 /* Images.xcassets */; };
@@ -16,9 +22,7 @@
 		D9C711A71AA6907D0092695F /* SubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711A61AA6907D0092695F /* SubController.swift */; };
 		D9C711AA1AA695BD0092695F /* SuperSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711A91AA695BD0092695F /* SuperSettingsController.swift */; };
 		D9C711AC1AA695FC0092695F /* SuperStandScoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */; };
-		D9C711AE1AA696110092695F /* SuperScoutingDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AD1AA696110092695F /* SuperScoutingDataController.swift */; };
 		D9C711B01AA696AD0092695F /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AF1AA696AD0092695F /* ColorScheme.swift */; };
-		D9D11AAE1AA91BFB005106D3 /* SuperOptionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D11AAD1AA91BFB005106D3 /* SuperOptionsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35F124541AC0EE6300643E30 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = ../../Downloads/Firebase.framework; sourceTree = "<group>"; };
+		35F124561AC0EF0F00643E30 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		35F124581AC0EF1F00643E30 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		35F1245A1AC0EF2900643E30 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		35F1245C1AC0EF3500643E30 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		35F1245E1AC0EF4100643E30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		35F124601AC0EFE700643E30 /* MVRTScouting-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVRTScouting-Bridging-Header.h"; sourceTree = "<group>"; };
 		D95EFAC21AA148F300748F34 /* MVRTScouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVRTScouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95EFAC61AA148F300748F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95EFAC71AA148F300748F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -45,9 +56,7 @@
 		D9C711A61AA6907D0092695F /* SubController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubController.swift; sourceTree = "<group>"; };
 		D9C711A91AA695BD0092695F /* SuperSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperSettingsController.swift; sourceTree = "<group>"; };
 		D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperStandScoutingController.swift; sourceTree = "<group>"; };
-		D9C711AD1AA696110092695F /* SuperScoutingDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperScoutingDataController.swift; sourceTree = "<group>"; };
 		D9C711AF1AA696AD0092695F /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
-		D9D11AAD1AA91BFB005106D3 /* SuperOptionsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperOptionsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +64,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35F1245F1AC0EF4100643E30 /* SystemConfiguration.framework in Frameworks */,
+				35F1245D1AC0EF3500643E30 /* Security.framework in Frameworks */,
+				35F1245B1AC0EF2900643E30 /* CFNetwork.framework in Frameworks */,
+				35F124591AC0EF1F00643E30 /* libc++.dylib in Frameworks */,
+				35F124571AC0EF0F00643E30 /* libicucore.dylib in Frameworks */,
+				35F124551AC0EE6300643E30 /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +86,12 @@
 		D95EFAB91AA148F300748F34 = {
 			isa = PBXGroup;
 			children = (
+				35F1245E1AC0EF4100643E30 /* SystemConfiguration.framework */,
+				35F1245C1AC0EF3500643E30 /* Security.framework */,
+				35F1245A1AC0EF2900643E30 /* CFNetwork.framework */,
+				35F124581AC0EF1F00643E30 /* libc++.dylib */,
+				35F124561AC0EF0F00643E30 /* libicucore.dylib */,
+				35F124541AC0EE6300643E30 /* Firebase.framework */,
 				D95EFAC41AA148F300748F34 /* MVRTScouting */,
 				D95EFADA1AA148F300748F34 /* MVRTScoutingTests */,
 				D95EFAC31AA148F300748F34 /* Products */,
@@ -95,8 +116,9 @@
 				D9C711A41AA67D2D0092695F /* MainOptionController.swift */,
 				D9C711AF1AA696AD0092695F /* ColorScheme.swift */,
 				D95EFACB1AA148F300748F34 /* Main.storyboard */,
-				D95EFACE1AA148F300748F34 /* Images.xcassets */,
 				D95EFAD01AA148F300748F34 /* LaunchScreen.xib */,
+				35F124601AC0EFE700643E30 /* MVRTScouting-Bridging-Header.h */,
+				D95EFACE1AA148F300748F34 /* Images.xcassets */,
 				D95EFAC51AA148F300748F34 /* Supporting Files */,
 			);
 			path = MVRTScouting;
@@ -130,9 +152,7 @@
 		D9C711A81AA695A00092695F /* SuperControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D9D11AAD1AA91BFB005106D3 /* SuperOptionsController.swift */,
 				D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */,
-				D9C711AD1AA696110092695F /* SuperScoutingDataController.swift */,
 				D9C711A91AA695BD0092695F /* SuperSettingsController.swift */,
 			);
 			name = SuperControllers;
@@ -243,9 +263,7 @@
 				D9C711AC1AA695FC0092695F /* SuperStandScoutingController.swift in Sources */,
 				D9C711A71AA6907D0092695F /* SubController.swift in Sources */,
 				D9C711B01AA696AD0092695F /* ColorScheme.swift in Sources */,
-				D9C711AE1AA696110092695F /* SuperScoutingDataController.swift in Sources */,
 				D9C711A51AA67D2D0092695F /* MainOptionController.swift in Sources */,
-				D9D11AAE1AA91BFB005106D3 /* SuperOptionsController.swift in Sources */,
 				D95EFAC81AA148F300748F34 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,10 +391,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/siddharth/Downloads,
+				);
 				INFOPLIST_FILE = MVRTScouting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVRTScouting/MVRTScouting-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -385,10 +411,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/siddharth/Downloads,
+				);
 				INFOPLIST_FILE = MVRTScouting/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MVRTScouting/MVRTScouting-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
