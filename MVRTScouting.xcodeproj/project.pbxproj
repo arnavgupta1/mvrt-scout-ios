@@ -29,6 +29,7 @@
 		D9C711AC1AA695FC0092695F /* SuperStandScoutingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */; };
 		D9C711B01AA696AD0092695F /* ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711AF1AA696AD0092695F /* ColorScheme.swift */; };
 		D9C741001AC76DD40080E126 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C740FF1AC76DD40080E126 /* Firebase.framework */; };
+		D9C741021AC770340080E126 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C741011AC770340080E126 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		D9C711AB1AA695FC0092695F /* SuperStandScoutingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperStandScoutingController.swift; sourceTree = "<group>"; };
 		D9C711AF1AA696AD0092695F /* ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorScheme.swift; sourceTree = "<group>"; };
 		D9C740FF1AC76DD40080E126 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Firebase.framework; path = MVRTScouting/Frameworks/Firebase.framework; sourceTree = "<group>"; };
+		D9C741011AC770340080E126 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C741021AC770340080E126 /* CoreBluetooth.framework in Frameworks */,
 				D9C741001AC76DD40080E126 /* Firebase.framework in Frameworks */,
 				35F1245F1AC0EF4100643E30 /* SystemConfiguration.framework in Frameworks */,
 				35F1245D1AC0EF3500643E30 /* Security.framework in Frameworks */,
@@ -117,6 +120,7 @@
 		D95EFAB91AA148F300748F34 = {
 			isa = PBXGroup;
 			children = (
+				D9C741011AC770340080E126 /* CoreBluetooth.framework */,
 				D9C740FF1AC76DD40080E126 /* Firebase.framework */,
 				35F1245E1AC0EF4100643E30 /* SystemConfiguration.framework */,
 				35F1245C1AC0EF3500643E30 /* Security.framework */,
