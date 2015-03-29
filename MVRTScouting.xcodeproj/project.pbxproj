@@ -117,6 +117,20 @@
 			name = SubSettingsController;
 			sourceTree = "<group>";
 		};
+		D9536F4C1AC7C828009A5672 /* SuperBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SuperBluetooth;
+			sourceTree = "<group>";
+		};
+		D9536F4D1AC7C9EC009A5672 /* SubScoutBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SubScoutBluetooth;
+			sourceTree = "<group>";
+		};
 		D95EFAB91AA148F300748F34 = {
 			isa = PBXGroup;
 			children = (
@@ -145,6 +159,8 @@
 		D95EFAC41AA148F300748F34 /* MVRTScouting */ = {
 			isa = PBXGroup;
 			children = (
+				D9536F4C1AC7C828009A5672 /* SuperBluetooth */,
+				D9536F4D1AC7C9EC009A5672 /* SubScoutBluetooth */,
 				355667A81AC67703009A7110 /* SubSettingsController */,
 				355667A71AC676F4009A7110 /* SubScoutController */,
 				D9C711A81AA695A00092695F /* SuperControllers */,
