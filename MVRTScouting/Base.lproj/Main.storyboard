@@ -99,6 +99,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="kdf-S6-t4I">
                                                     <rect key="frame" x="218" y="6" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="LandfillTotes:" destination="grT-zm-DUn" eventType="valueChanged" id="LKg-ZA-upw"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b1m-De-y9v">
                                                     <rect key="frame" x="168" y="11" width="42" height="21"/>
@@ -127,6 +130,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="hLN-eO-YdA">
                                                     <rect key="frame" x="218" y="6" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="FeederTotes:" destination="grT-zm-DUn" eventType="valueChanged" id="gMk-89-oKz"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Da-ew-Pnx">
                                                     <rect key="frame" x="168" y="11" width="42" height="21"/>
@@ -155,6 +161,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="87i-6s-dI9">
                                                     <rect key="frame" x="218" y="7" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="TotesLost:" destination="grT-zm-DUn" eventType="valueChanged" id="QxU-e2-CHJ"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wPs-Gb-fCJ">
                                                     <rect key="frame" x="168" y="11" width="42" height="21"/>
@@ -187,6 +196,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="eea-Pv-ZI9">
                                                     <rect key="frame" x="218" y="7" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="StacksMade:" destination="grT-zm-DUn" eventType="valueChanged" id="syZ-kQ-g4Z"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BXY-PM-ft9">
                                                     <rect key="frame" x="168" y="11" width="42" height="21"/>
@@ -215,6 +227,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="6tW-Zn-JiX">
                                                     <rect key="frame" x="218" y="7" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="StacksKnockedOver:" destination="grT-zm-DUn" eventType="valueChanged" id="pxM-mK-GWu"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="naO-Kr-2xd">
                                                     <rect key="frame" x="168" y="11" width="42" height="21"/>
@@ -251,6 +266,9 @@
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="CappedStacks:" destination="grT-zm-DUn" eventType="valueChanged" id="0W7-Eu-yRx"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -280,6 +298,9 @@
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="InBinEver:" destination="grT-zm-DUn" eventType="valueChanged" id="rWp-Xq-nXR"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -301,6 +322,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="icC-pW-K4o">
                                                     <rect key="frame" x="218" y="7" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="NoodlesToLandfill:" destination="grT-zm-DUn" eventType="valueChanged" id="IoD-dP-xdd"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moved noodles to landfill?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L6v-ST-CM8">
                                                     <rect key="frame" x="8" y="14" width="159" height="15"/>
@@ -406,6 +430,9 @@
                                                 <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" id="Dje-UT-uGq">
                                                     <rect key="frame" x="218" y="7" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="TotesContrib:" destination="9Bd-rq-4JD" eventType="valueChanged" id="D4C-6U-Ays"/>
+                                                    </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ifT-JA-G91">
                                                     <rect key="frame" x="168" y="11" width="42" height="21"/>
@@ -825,6 +852,10 @@
                                                         <segment title="Stg. Area"/>
                                                         <segment title="Landfill"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="Location:" destination="0sT-FQ-jCB" eventType="valueChanged" id="gkK-DN-uul"/>
+                                                        <action selector="indexChanged:" destination="0sT-FQ-jCB" eventType="valueChanged" id="fIX-Zp-0qA"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -854,6 +885,9 @@
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="StepCan:" destination="0sT-FQ-jCB" eventType="valueChanged" id="5oc-58-grh"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -879,6 +913,9 @@
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="YellowTote:" destination="0sT-FQ-jCB" eventType="valueChanged" id="nZe-WT-bGC"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -897,6 +934,9 @@
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="StgArea:" destination="0sT-FQ-jCB" eventType="valueChanged" id="k2Z-l3-afU"/>
+                                                    </connections>
                                                 </segmentedControl>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick up cans from Stg Area?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Jak-bg-5MF">
                                                     <rect key="frame" x="8" y="11" width="219" height="21"/>
@@ -933,6 +973,9 @@
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="AutonZoneEnd:" destination="0sT-FQ-jCB" eventType="valueChanged" id="eD2-Oq-FY9"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -958,6 +1001,9 @@
                                                         <segment title="Yes"/>
                                                         <segment title="No"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="InterfereRobot:" destination="0sT-FQ-jCB" eventType="valueChanged" id="vpw-SP-XIX"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                         </tableViewCellContentView>

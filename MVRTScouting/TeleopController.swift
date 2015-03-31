@@ -44,7 +44,40 @@ class TeleopController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+    
+    
+    @IBAction func LandfillTotes(sender: UIStepper) {
+        
+    }
+    
+    @IBAction func FeederTotes(sender: UIStepper) {
+        
+    }
+    
+    @IBAction func TotesLost(sender: UIStepper) {
+        
+    }
+    
+    @IBAction func StacksMade(sender: UIStepper) {
+        
+    }
+    
+    @IBAction func StacksKnockedOver(sender: UIStepper) {
+        
+    }
+    
+    @IBAction func CappedStacks(sender: UISegmentedControl) {
+        
+    }
+    
+    @IBAction func InBinEver(sender: UISegmentedControl) {
+        
+    }
+    
+    @IBAction func NoodlesToLandfill(sender: UIStepper) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
