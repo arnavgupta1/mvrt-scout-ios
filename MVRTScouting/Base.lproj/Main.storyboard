@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7525" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FU4-dy-5ws">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="FU4-dy-5ws">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7516"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -89,8 +89,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landfill Totes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sI3-p4-dPN">
-                                                    <rect key="frame" x="8" y="11" width="101" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Landfill Collected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sI3-p4-dPN">
+                                                    <rect key="frame" x="8" y="11" width="133" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -100,7 +100,7 @@
                                                     <rect key="frame" x="218" y="6" width="94" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="LandfillTotes:" destination="grT-zm-DUn" eventType="valueChanged" id="LKg-ZA-upw"/>
+                                                        <action selector="LandfillTotes:" destination="grT-zm-DUn" eventType="valueChanged" id="8Dr-tI-6rd"/>
                                                     </connections>
                                                 </stepper>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b1m-De-y9v">
@@ -120,8 +120,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeder Totes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zcp-0A-zzE">
-                                                    <rect key="frame" x="8" y="11" width="100" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeder Collected" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zcp-0A-zzE">
+                                                    <rect key="frame" x="8" y="11" width="132" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -299,7 +299,7 @@
                                                         <segment title="No"/>
                                                     </segments>
                                                     <connections>
-                                                        <action selector="InBinEver:" destination="grT-zm-DUn" eventType="valueChanged" id="rWp-Xq-nXR"/>
+                                                        <action selector="InBinEver:" destination="grT-zm-DUn" eventType="valueChanged" id="DXI-0S-G2a"/>
                                                     </connections>
                                                 </segmentedControl>
                                             </subviews>
@@ -376,14 +376,10 @@
                     <tabBarItem key="tabBarItem" title="Teleop" id="lTn-us-jbd"/>
                     <connections>
                         <outlet property="CappedStack" destination="a30-yp-uKq" id="m04-7m-ukL"/>
-                        <outlet property="CappedStacks" destination="a30-yp-uKq" id="FIU-sZ-ttO"/>
-                        <outlet property="FeederLabel" destination="6Da-ew-Pnx" id="zTy-yq-aea"/>
                         <outlet property="FeederTotesCounter" destination="hLN-eO-YdA" id="CMz-Gc-QVc"/>
                         <outlet property="FeederTotesLabel" destination="6Da-ew-Pnx" id="YEe-w0-QlN"/>
                         <outlet property="KnockedStacksCounter" destination="6tW-Zn-JiX" id="gnf-4K-RRg"/>
                         <outlet property="KnockedStacksLabel" destination="naO-Kr-2xd" id="HjN-C6-WhQ"/>
-                        <outlet property="LandfillCounter" destination="b1m-De-y9v" id="g8l-vg-yJE"/>
-                        <outlet property="LandfillTotesCounte" destination="kdf-S6-t4I" id="pS2-K0-ii8"/>
                         <outlet property="LandfillTotesCounter" destination="kdf-S6-t4I" id="u2e-hT-l49"/>
                         <outlet property="LandfillTotesLabel" destination="b1m-De-y9v" id="XUj-Td-DLU"/>
                         <outlet property="LostTotesCounter" destination="87i-6s-dI9" id="hMX-rD-ePC"/>
@@ -391,11 +387,8 @@
                         <outlet property="NoodleInBin" destination="Ehs-t6-j0t" id="WhA-vA-TM3"/>
                         <outlet property="NoodleLandfillLabel" destination="F5R-nG-mxD" id="n1q-Pq-9p0"/>
                         <outlet property="NoodlesLandfillCounter" destination="icC-pW-K4o" id="0Ok-Bs-MwZ"/>
-                        <outlet property="StackMadeLabel" destination="BXY-PM-ft9" id="dOy-Jd-uKO"/>
-                        <outlet property="StacksKnockedLabel" destination="naO-Kr-2xd" id="fuj-30-jmQ"/>
                         <outlet property="StacksMadeCounter" destination="eea-Pv-ZI9" id="Tfg-TT-AbQ"/>
                         <outlet property="StacksMadeLabel" destination="BXY-PM-ft9" id="t77-V9-z5I"/>
-                        <outlet property="TotesLostLabel" destination="wPs-Gb-fCJ" id="sCe-RE-w2b"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQS-Yi-eEn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -458,7 +451,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" id="auW-fz-arD">
+                                                <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" id="auW-fz-arD">
                                                     <rect key="frame" x="150" y="-59" width="162" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
@@ -483,7 +476,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" id="Yt6-Nr-M7Y">
+                                                <pickerView tag="1" contentMode="scaleToFill" showsSelectionIndicator="NO" id="Yt6-Nr-M7Y">
                                                     <rect key="frame" x="169" y="-59" width="143" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
@@ -508,7 +501,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" id="ndz-LK-Moa">
+                                                <pickerView tag="2" contentMode="scaleToFill" showsSelectionIndicator="NO" id="ndz-LK-Moa">
                                                     <rect key="frame" x="171" y="-59" width="141" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
@@ -533,7 +526,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" id="vYi-Sg-Q72">
+                                                <pickerView tag="3" contentMode="scaleToFill" showsSelectionIndicator="NO" id="vYi-Sg-Q72">
                                                     <rect key="frame" x="178" y="-59" width="134" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
@@ -558,7 +551,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <pickerView contentMode="scaleToFill" id="Opz-47-b89">
+                                                <pickerView tag="4" contentMode="scaleToFill" showsSelectionIndicator="NO" id="Opz-47-b89">
                                                     <rect key="frame" x="168" y="-59" width="144" height="162"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </pickerView>
@@ -854,7 +847,6 @@
                                                     </segments>
                                                     <connections>
                                                         <action selector="Location:" destination="0sT-FQ-jCB" eventType="valueChanged" id="gkK-DN-uul"/>
-                                                        <action selector="indexChanged:" destination="0sT-FQ-jCB" eventType="valueChanged" id="fIX-Zp-0qA"/>
                                                     </connections>
                                                 </segmentedControl>
                                             </subviews>
