@@ -62,7 +62,7 @@ class TeleopController: UITableViewController {
         //LandfillTotesLabel.text = NSString(format: "%.1f", 0.0);
         
         landfillTotes = Int(LandfillTotesCounter.value);
-        LandfillTotesLabel.text = NSString(format: "%.1f", LandfillTotesCounter.value);
+        LandfillTotesLabel.text = String(format: "%.1f", LandfillTotesCounter.value)
         
     }
     
@@ -70,21 +70,21 @@ class TeleopController: UITableViewController {
         
         //FeederTotesLabel.text = NSString(format: "%.1f", 0.0);
         feederTotes = Int(FeederTotesCounter.value);
-        FeederTotesLabel.text = NSString(format: "%.1f", FeederTotesCounter.value);
+        FeederTotesLabel.text = String(format: "%.1f", FeederTotesCounter.value) as String;
     }
     
     @IBAction func TotesLost(sender: UIStepper) {
         
         //LostTotesLabel.text = NSString(format: "%.1f", 0.0);
         lostTotes = Int(LostTotesCounter.value);
-        LostTotesLabel.text = NSString(format: "%.1f", LostTotesCounter.value);
+        LostTotesLabel.text = String(format: "%.1f", LostTotesCounter.value);
     }
     
     @IBAction func StacksMade(sender: UIStepper) {
         
         //StacksMadeLabel.text = NSString(format: "%.1f", 0.0);
         madeStacks = Int(StacksMadeCounter.value);
-        StacksMadeLabel.text = NSString(format: "%.1f", StacksMadeCounter.value);
+        StacksMadeLabel.text = String(format: "%.1f", StacksMadeCounter.value);
     }
     
     @IBAction func StacksKnockedOver(sender: UIStepper) {
@@ -92,7 +92,7 @@ class TeleopController: UITableViewController {
         //KnockedStacksLabel.text = NSString(format: "%.1f", 0.0);
         
         knockedStacks = Int(KnockedStacksCounter.value);
-        KnockedStacksLabel.text = NSString(format: "%.1f", KnockedStacksCounter.value);
+        KnockedStacksLabel.text = String(format: "%.1f", KnockedStacksCounter.value);
     }
     
     @IBAction func CappedStacks(sender: UISegmentedControl) {
@@ -121,9 +121,9 @@ class TeleopController: UITableViewController {
     
     @IBAction func NoodlesToLandfill(sender: UIStepper) {
         
-        NoodleLandfillLabel.text = NSString(format: "%.1f", 0.0);
+        NoodleLandfillLabel.text = String(format: "%.1f", 0.0);
         noodleToLandfill = Int(NoodlesLandfillCounter.value);
-        NoodleLandfillLabel.text = NSString(format: "%.1f", NoodlesLandfillCounter.value);
+        NoodleLandfillLabel.text = String(format: "%.1f", NoodlesLandfillCounter.value);
     }
     
     override func didReceiveMemoryWarning() {

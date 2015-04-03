@@ -10,6 +10,7 @@ import UIKit
 
 class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    //connections to elements in the storyboard
     
     @IBOutlet weak var ContribTotesCounter: UIStepper!
     @IBOutlet weak var ContribTotesLabel: UILabel!
@@ -24,8 +25,10 @@ class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerV
     
     @IBOutlet weak var OtherNoodlePicker: UIPickerView!
     
+    //vars for collecting data
     var contribTotes:Int = 0;
     let pickerData = ["Did Not","Tried, Unsuccessful","Inconsistent","Inefficient","Consistent","Powerhouse"];
+    var rightButton:UIBarButtonItem!
     
     var efficiencyPick = "nothing"
     var stackPick = "nothing"
@@ -33,9 +36,13 @@ class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerV
     var intakePick = "nothing"
     var otherPick = "nothing"
     
+    //instances to collect data from other view controllers
+    var teleopContr: TeleopController = TeleopController(nibName: nil, bundle: nil)
+    var autonContr: AutonController = AutonController(nibName: nil, bundle: nil)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         EfficiencyPicker.dataSource = self;
         EfficiencyPicker.delegate = self;
         EfficiencyPicker.tag = PickerTag.effTag.rawValue;
@@ -57,6 +64,15 @@ class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerV
         OtherNoodlePicker.tag = PickerTag.otherTag.rawValue;
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+        
+        self.tabBarController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "submit", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("submitData"))
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        self.tabBarController?.navigationItem.rightBarButtonItem = nil
+    }
     enum PickerTag: Int {
         // Integer values will be implicitly supplied; you could optionally set your own values
         case effTag
@@ -68,7 +84,7 @@ class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerV
     
     @IBAction func TotesContrib(sender: UIStepper) {
         contribTotes = Int(ContribTotesCounter.value);
-        ContribTotesLabel.text = NSString(format: "%.1f", ContribTotesCounter.value);
+        ContribTotesLabel.text = String(format: "%.1f", ContribTotesCounter.value);
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,6 +120,10 @@ class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerV
                 println("Unknown pickerView.")
             }
         }
+    }
+    
+    func submitData() {
+        //using variables, send data
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
