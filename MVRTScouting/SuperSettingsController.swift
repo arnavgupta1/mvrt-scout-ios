@@ -9,7 +9,15 @@
 import UIKit
 
 class SuperSettingsController: UIViewController {
-
+    
+    @IBOutlet private weak var allianceControl: UISegmentedControl!
+    @IBOutlet private weak var nameInput: UITextField!
+    @IBOutlet private weak var acceptingConnectionsSwitch: UISwitch!
+    
+    var isAcceptingConnections : Bool {
+        return acceptingConnectionsSwitch.on
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

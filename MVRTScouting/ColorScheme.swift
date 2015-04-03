@@ -16,6 +16,8 @@ func colorFromHex(hex : UInt) -> UIColor {
 enum Colors : UInt {
     case Purple = 0x673AB7
     case Gold = 0xFFC107
+    case Emerald = 0x2ECC71
+    
     func toColor() -> UIColor {
         return colorFromHex(self.rawValue)
     }

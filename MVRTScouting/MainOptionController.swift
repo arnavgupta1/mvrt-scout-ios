@@ -45,5 +45,14 @@ class MainOptionController: UIViewController {
     override func viewWillDisappear(animated: Bool) {
         self.navigationController?.navigationBarHidden = false
     }
+    
+    
+    @IBAction func willMoveToSuperScout(sender: AnyObject) {
+        SuperBluetoothHandler.sharedInstance.startConnecting()
+    }
+    
+    @IBAction func willMoveToSubScout(sender: AnyObject) {
+        
+    }
 
 }

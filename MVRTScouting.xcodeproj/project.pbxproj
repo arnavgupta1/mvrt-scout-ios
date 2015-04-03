@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		355667AB1AC67732009A7110 /* SubSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355667AA1AC67732009A7110 /* SubSettingsController.swift */; };
-		355667AD1AC6776E009A7110 /* SubSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355667AC1AC6776E009A7110 /* SubSetupController.swift */; };
 		355667B11AC677E4009A7110 /* TeleopController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355667B01AC677E4009A7110 /* TeleopController.swift */; };
 		355667B31AC677F0009A7110 /* PostgameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355667B21AC677F0009A7110 /* PostgameController.swift */; };
 		355667B51AC67815009A7110 /* ScoutRevController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355667B41AC67815009A7110 /* ScoutRevController.swift */; };
@@ -18,11 +17,14 @@
 		35F1245B1AC0EF2900643E30 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F1245A1AC0EF2900643E30 /* CFNetwork.framework */; };
 		35F1245D1AC0EF3500643E30 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F1245C1AC0EF3500643E30 /* Security.framework */; };
 		35F1245F1AC0EF4100643E30 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35F1245E1AC0EF4100643E30 /* SystemConfiguration.framework */; };
+		D921FBAD1ACCA7C0009067C8 /* SuperBluetoothConnections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D921FBAC1ACCA7C0009067C8 /* SuperBluetoothConnections.swift */; };
+		D92858281ACC45780006D1F9 /* SubScoutBluetoothHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92858271ACC45780006D1F9 /* SubScoutBluetoothHandler.swift */; };
 		D95EFAC81AA148F300748F34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EFAC71AA148F300748F34 /* AppDelegate.swift */; };
 		D95EFACD1AA148F300748F34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D95EFACB1AA148F300748F34 /* Main.storyboard */; };
 		D95EFACF1AA148F300748F34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D95EFACE1AA148F300748F34 /* Images.xcassets */; };
 		D95EFAD21AA148F300748F34 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D95EFAD01AA148F300748F34 /* LaunchScreen.xib */; };
 		D95EFADE1AA148F300748F34 /* MVRTScoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95EFADD1AA148F300748F34 /* MVRTScoutingTests.swift */; };
+		D97FAFBF1AC8B16C0056C2AC /* SuperBluetoothHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D97FAFBE1AC8B16C0056C2AC /* SuperBluetoothHandler.swift */; };
 		D9C711A51AA67D2D0092695F /* MainOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711A41AA67D2D0092695F /* MainOptionController.swift */; };
 		D9C711A71AA6907D0092695F /* SubController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711A61AA6907D0092695F /* SubController.swift */; };
 		D9C711AA1AA695BD0092695F /* SuperSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C711A91AA695BD0092695F /* SuperSettingsController.swift */; };
@@ -44,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		355667AA1AC67732009A7110 /* SubSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSettingsController.swift; sourceTree = "<group>"; };
-		355667AC1AC6776E009A7110 /* SubSetupController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubSetupController.swift; sourceTree = "<group>"; };
 		355667B01AC677E4009A7110 /* TeleopController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeleopController.swift; sourceTree = "<group>"; };
 		355667B21AC677F0009A7110 /* PostgameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostgameController.swift; sourceTree = "<group>"; };
 		355667B41AC67815009A7110 /* ScoutRevController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoutRevController.swift; sourceTree = "<group>"; };
@@ -55,6 +56,8 @@
 		35F1245C1AC0EF3500643E30 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		35F1245E1AC0EF4100643E30 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		35F124601AC0EFE700643E30 /* MVRTScouting-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MVRTScouting-Bridging-Header.h"; sourceTree = "<group>"; };
+		D921FBAC1ACCA7C0009067C8 /* SuperBluetoothConnections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperBluetoothConnections.swift; sourceTree = "<group>"; };
+		D92858271ACC45780006D1F9 /* SubScoutBluetoothHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubScoutBluetoothHandler.swift; sourceTree = "<group>"; };
 		D95EFAC21AA148F300748F34 /* MVRTScouting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVRTScouting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95EFAC61AA148F300748F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95EFAC71AA148F300748F34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		D95EFAD71AA148F300748F34 /* MVRTScoutingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVRTScoutingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D95EFADC1AA148F300748F34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D95EFADD1AA148F300748F34 /* MVRTScoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVRTScoutingTests.swift; sourceTree = "<group>"; };
+		D97FAFBE1AC8B16C0056C2AC /* SuperBluetoothHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperBluetoothHandler.swift; sourceTree = "<group>"; };
 		D9C711A41AA67D2D0092695F /* MainOptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainOptionController.swift; sourceTree = "<group>"; };
 		D9C711A61AA6907D0092695F /* SubController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubController.swift; sourceTree = "<group>"; };
 		D9C711A91AA695BD0092695F /* SuperSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuperSettingsController.swift; sourceTree = "<group>"; };
@@ -112,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				355667AA1AC67732009A7110 /* SubSettingsController.swift */,
-				355667AC1AC6776E009A7110 /* SubSetupController.swift */,
 			);
 			name = SubSettingsController;
 			sourceTree = "<group>";
@@ -120,6 +123,9 @@
 		D9536F4C1AC7C828009A5672 /* SuperBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				D97FAFBE1AC8B16C0056C2AC /* SuperBluetoothHandler.swift */,
+				D92858271ACC45780006D1F9 /* SubScoutBluetoothHandler.swift */,
+				D921FBAC1ACCA7C0009067C8 /* SuperBluetoothConnections.swift */,
 			);
 			name = SuperBluetooth;
 			sourceTree = "<group>";
@@ -261,10 +267,11 @@
 				TargetAttributes = {
 					D95EFAC11AA148F300748F34 = {
 						CreatedOnToolsVersion = 6.3;
-						DevelopmentTeam = BV428J45SW;
+						DevelopmentTeam = 9X6C3CZSAP;
 					};
 					D95EFAD61AA148F300748F34 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 9X6C3CZSAP;
 						TestTargetID = D95EFAC11AA148F300748F34;
 					};
 				};
@@ -315,9 +322,10 @@
 			files = (
 				D9C711AA1AA695BD0092695F /* SuperSettingsController.swift in Sources */,
 				D9C711AC1AA695FC0092695F /* SuperStandScoutingController.swift in Sources */,
+				D921FBAD1ACCA7C0009067C8 /* SuperBluetoothConnections.swift in Sources */,
 				355667B51AC67815009A7110 /* ScoutRevController.swift in Sources */,
-				355667AD1AC6776E009A7110 /* SubSetupController.swift in Sources */,
 				355667B11AC677E4009A7110 /* TeleopController.swift in Sources */,
+				D92858281ACC45780006D1F9 /* SubScoutBluetoothHandler.swift in Sources */,
 				D9C711A71AA6907D0092695F /* SubController.swift in Sources */,
 				355667AB1AC67732009A7110 /* SubSettingsController.swift in Sources */,
 				355667B71AC67849009A7110 /* AutonController.swift in Sources */,
@@ -325,6 +333,7 @@
 				D9C711B01AA696AD0092695F /* ColorScheme.swift in Sources */,
 				D9C711A51AA67D2D0092695F /* MainOptionController.swift in Sources */,
 				D95EFAC81AA148F300748F34 /* AppDelegate.swift in Sources */,
+				D97FAFBF1AC8B16C0056C2AC /* SuperBluetoothHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
