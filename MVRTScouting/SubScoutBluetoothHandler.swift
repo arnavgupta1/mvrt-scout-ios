@@ -18,8 +18,10 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
     
     private var manager : CBPeripheralManager!
     private let service_id = ScoutServices.scout_service
+    private var shouldConnect : Bool
     
     override init() {
+        shouldConnect = false
         super.init()
         manager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
     }
@@ -33,10 +35,10 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
         case .Unsupported: fallthrough
         case .Unauthorized: fallthrough
         case .PoweredOff: break
-           // terminateConnections()
+           // terminateConnections()        TODO
         case .PoweredOn: break
-         //   if shouldStartConnecting {
-            //    startConnecting()
+         //   if shouldStartConnecting {    TODO
+            //    startConnecting()         TODO
            // }
         default:
             return
@@ -44,15 +46,15 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
     }
     
     func startConnecting() {
-        shouldStartConnecting = true
+        shouldConnect = true
         if manager.state == .PoweredOn {
-            manager.startAdvertising(<#advertisementData: [NSObject : AnyObject]!#>)
+            manager.startAdvertising(nil) // <- change
         }
     }
     
     func terminateConnections() {
-        shouldStartConnecting = false
-        manager.stopScan()
+        shouldConnect = false
+        manager.stopAdvertising()
     }
 
 }
