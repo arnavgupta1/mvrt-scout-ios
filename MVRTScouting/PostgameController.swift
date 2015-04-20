@@ -8,33 +8,32 @@
 
 import UIKit
 
-class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class PostgameController: UITableViewController {
 
     //connections to elements in the storyboard
     
     @IBOutlet weak var ContribTotesCounter: UIStepper!
     @IBOutlet weak var ContribTotesLabel: UILabel!
     
-    @IBOutlet weak var EfficiencyPicker: UIPickerView!
+    @IBOutlet weak var EffSlider: UISlider!
     
-    @IBOutlet weak var StackAbilityPicker: UIPickerView!
+    @IBOutlet weak var StackSlider: UISlider!
     
-    @IBOutlet weak var CapAbilityPicker: UIPickerView!
+    @IBOutlet weak var CapSlider: UISlider!
     
-    @IBOutlet weak var IntakeAbilityPicker: UIPickerView!
+    @IBOutlet weak var IntakeSlider: UISlider!
     
-    @IBOutlet weak var OtherNoodlePicker: UIPickerView!
+    @IBOutlet weak var OtherNoodSlider: UISlider!
     
     //vars for collecting data
     var contribTotes:Int = 0;
-    let pickerData = ["Did Not","Tried, Unsuccessful","Inconsistent","Inefficient","Consistent","Powerhouse"];
     var rightButton:UIBarButtonItem!
     
-    var efficiencyPick = "nothing"
-    var stackPick = "nothing"
-    var capPick = "nothing"
-    var intakePick = "nothing"
-    var otherPick = "nothing"
+    var efficiencyPick = 0
+    var stackPick = 0
+    var capPick = 0
+    var intakePick = 0
+    var otherPick = 0
     
     //instances to collect data from other view controllers
     var teleopContr: TeleopController = TeleopController(nibName: nil, bundle: nil)
@@ -43,25 +42,7 @@ class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerV
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        EfficiencyPicker.dataSource = self;
-        EfficiencyPicker.delegate = self;
-        EfficiencyPicker.tag = PickerTag.effTag.rawValue;
         
-        StackAbilityPicker.dataSource = self;
-        StackAbilityPicker.delegate = self;
-        StackAbilityPicker.tag = PickerTag.stackTag.rawValue;
-        
-        CapAbilityPicker.dataSource = self;
-        CapAbilityPicker.delegate = self;
-        CapAbilityPicker.tag = PickerTag.capTag.rawValue;
-        
-        IntakeAbilityPicker.dataSource = self;
-        IntakeAbilityPicker.delegate = self;
-        IntakeAbilityPicker.tag = PickerTag.intakeTag.rawValue;
-        
-        OtherNoodlePicker.dataSource = self;
-        OtherNoodlePicker.delegate = self;
-        OtherNoodlePicker.tag = PickerTag.otherTag.rawValue;
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -73,69 +54,40 @@ class PostgameController: UITableViewController, UIPickerViewDelegate, UIPickerV
     override func viewWillDisappear(animated: Bool) {
         self.tabBarController?.navigationItem.rightBarButtonItem = nil
     }
-    enum PickerTag: Int {
-        // Integer values will be implicitly supplied; you could optionally set your own values
-        case effTag
-        case stackTag
-        case capTag
-        case intakeTag
-        case otherTag
-    }
     
     @IBAction func TotesContrib(sender: UIStepper) {
         contribTotes = Int(ContribTotesCounter.value);
         ContribTotesLabel.text = String(format: "%.1f", ContribTotesCounter.value);
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return pickerData[row]
-    }
-    
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    @IBAction func EffSli(sender: AnyObject) {
         
-        if let tag = PickerTag(rawValue: pickerView.tag) {
-            
-            switch tag {
-            case .effTag:
-                efficiencyPick = pickerData[row]
-                
-            case .stackTag:
-                stackPick = pickerData[row]
-                
-            case .capTag:
-                capPick = pickerData[row]
-                
-            case .intakeTag:
-                intakePick = pickerData[row]
-                
-            case .otherTag:
-                otherPick = pickerData[row]
-                
-            default:
-                println("Unknown pickerView.")
-            }
-        }
+        efficiencyPick = Int(EffSlider.value)
+    }
+    
+    @IBAction func StackSli(sender: AnyObject) {
+        
+        stackPick = Int(StackSlider.value)
+    }
+    
+    @IBAction func CapSli(sender: AnyObject) {
+        capPick = Int(CapSlider.value)
+    }
+    
+    @IBAction func IntakeSli(sender: AnyObject) {
+        intakePick = Int(IntakeSlider.value)
+    }
+    
+    @IBAction func OthNoodSli(sender: AnyObject) {
+        otherPick = Int(OtherNoodSlider.value)
     }
     
     func submitData() {
         //using variables, send data
     }
     
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
-        return 1
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-    
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
-    }
-    
-    
-
-   
-
 }
