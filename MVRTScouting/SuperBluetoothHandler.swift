@@ -15,10 +15,12 @@ class SuperBluetoothHandler: NSObject, CBCentralManagerDelegate {
     private var manager : CBCentralManager!
     private var shouldStartConnecting : Bool
     private var notificationCenter : NSNotificationCenter
+    private var data : Dictionary<CBPeripheral, ScoutingData>
     
     override init() {
         shouldStartConnecting = false
         notificationCenter = NSNotificationCenter()
+        data = Dictionary<CBPeripheral, ScoutingData>()
         super.init()
         manager = CBCentralManager(delegate: self, queue: nil)
     }
