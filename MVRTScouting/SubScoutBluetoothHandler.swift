@@ -7,6 +7,7 @@
 //
 
 import CoreBluetooth
+import UIKit
 
 struct ScoutServices {
     static let scout_service = CBUUID(string: "1815AE76-7F61-49A5-B9D1-937686835D76")
@@ -17,13 +18,15 @@ private let _SubBluetoothInstance = SubScoutBluetoothHandler()
 class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
     
     private var manager : CBPeripheralManager!
-    private let service_id = ScoutServices.scout_service
+    private var service : CBMutableService
     private var shouldConnect : Bool
     
     override init() {
         shouldConnect = false
+        service = CBMutableService(type: ScoutServices.scout_service, primary: true)
         super.init()
         manager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
+        manager.addService(service)
     }
     
     class var sharedInstance : SubScoutBluetoothHandler {
@@ -34,12 +37,12 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
         switch peripheral.state {
         case .Unsupported: fallthrough
         case .Unauthorized: fallthrough
-        case .PoweredOff: break
-           // terminateConnections()        TODO
-        case .PoweredOn: break
-         //   if shouldStartConnecting {    TODO
-            //    startConnecting()         TODO
-           // }
+        case .PoweredOff:
+            terminateConnections()
+        case .PoweredOn:
+            if shouldConnect {
+                startConnecting()
+            }
         default:
             return
         }
@@ -48,13 +51,27 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
     func startConnecting() {
         shouldConnect = true
         if manager.state == .PoweredOn {
-            manager.startAdvertising(nil) // <- change
+            manager.startAdvertising([CBAdvertisementDataServiceUUIDsKey : [service.UUID], CBAdvertisementDataLocalNameKey : UIDevice.currentDevice().name])
         }
     }
     
     func terminateConnections() {
         shouldConnect = false
         manager.stopAdvertising()
+    }
+    
+    func peripheralManager(peripheral: CBPeripheralManager!, didAddService service: CBService!, error: NSError!) {
+        println("ADDED SERVICE: \(service)")
+        if let e = error {
+            println("ERROR : \(e)")
+        }
+    }
+    
+    func peripheralManagerDidStartAdvertising(peripheral: CBPeripheralManager!, error: NSError!) {
+        println("STARTED ADVERTISING: \(peripheral)")
+        if let e = error {
+            println("ERROR : \(e)")
+        }
     }
 
 }

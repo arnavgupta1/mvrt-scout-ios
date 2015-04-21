@@ -52,7 +52,8 @@ class MainOptionController: UIViewController {
     }
     
     @IBAction func willMoveToSubScout(sender: AnyObject) {
-        
+        println("HI")
+        SubScoutBluetoothHandler.sharedInstance.startConnecting()
     }
 
 }

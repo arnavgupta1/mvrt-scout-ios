@@ -124,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				D97FAFBE1AC8B16C0056C2AC /* SuperBluetoothHandler.swift */,
-				D92858271ACC45780006D1F9 /* SubScoutBluetoothHandler.swift */,
 				D921FBAC1ACCA7C0009067C8 /* SuperBluetoothConnections.swift */,
 			);
 			name = SuperBluetooth;
@@ -133,6 +132,7 @@
 		D9536F4D1AC7C9EC009A5672 /* SubScoutBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				D92858271ACC45780006D1F9 /* SubScoutBluetoothHandler.swift */,
 			);
 			name = SubScoutBluetooth;
 			sourceTree = "<group>";
@@ -461,6 +461,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/siddharth/Downloads,
@@ -471,6 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MVRTScouting/MVRTScouting-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -482,6 +485,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/siddharth/Downloads,
@@ -492,6 +497,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "MVRTScouting/MVRTScouting-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -72,7 +72,7 @@ class SuperBluetoothHandler: NSObject, CBCentralManagerDelegate {
     func startConnecting() {
         shouldStartConnecting = true
         if manager.state == .PoweredOn {
-            manager.scanForPeripheralsWithServices(/*[ScoutServices.scout_service]*/ nil, options: nil)
+            manager.scanForPeripheralsWithServices([ScoutServices.scout_service], options: nil)
         }
     }
     
