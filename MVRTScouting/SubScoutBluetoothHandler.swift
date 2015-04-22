@@ -30,9 +30,9 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
     override init() {
         shouldConnect = false
         mainService = CBMutableService(type: ScoutServices.scout_service, primary: true)
-        autonService = CBMutableService(type: ScoutServices.auton_service, primary: false)
-        teleopService = CBMutableService(type: ScoutServices.teleop_service, primary: false)
-        postgameService = CBMutableService(type: ScoutServices.postgame_service, primary: false)
+        autonService = CBMutableService(type: ScoutServices.auton_service, primary: true)
+        teleopService = CBMutableService(type: ScoutServices.teleop_service, primary: true)
+        postgameService = CBMutableService(type: ScoutServices.postgame_service, primary: true)
         super.init()
         manager = CBPeripheralManager(delegate: self, queue: nil, options: nil)
         createServiceTree()
@@ -43,6 +43,19 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
     }
     
     func createServiceTree() {
+        
+        var autonStruct = AutonData()
+        let autonCharacteristic = CBMutableCharacteristic(type: CBUUID(string: "1143A891-1EE6-4ABA-B4E4-B88712AD170C"), properties: CBCharacteristicProperties.Read, value: NSData(bytes: &autonStruct, length: sizeof(AutonData)), permissions: CBAttributePermissions.Readable)
+        autonService.characteristics = [autonCharacteristic]
+        
+        var teleopStruct = TeleopData()
+        let teleopCharacteristic = CBMutableCharacteristic(type: CBUUID(string: "49DA6A3C-FE2D-486C-A989-CD5608FE69A6"), properties: CBCharacteristicProperties.Read, value: NSData(bytes: &teleopStruct, length: sizeof(TeleopData)), permissions: CBAttributePermissions.Readable)
+        teleopService.characteristics = [teleopCharacteristic]
+        
+        var postgameStruct = PostgameData()
+        let postgameCharacteristic = CBMutableCharacteristic(type: CBUUID(string: "DA648E12-200D-4BAC-AE3A-91FCE8692C39"), properties: CBCharacteristicProperties.Read, value: NSData(bytes: &postgameStruct, length: sizeof(PostgameData)), permissions: CBAttributePermissions.Readable)
+        postgameService.characteristics = [postgameCharacteristic]
+        
         manager.addService(mainService)
         manager.addService(autonService)
         manager.addService(teleopService)
@@ -67,7 +80,7 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
     func startConnecting() {
         shouldConnect = true
         if manager.state == .PoweredOn {
-            manager.startAdvertising([CBAdvertisementDataServiceUUIDsKey : [mainService.UUID], CBAdvertisementDataLocalNameKey : UIDevice.currentDevice().name])
+            manager.startAdvertising([CBAdvertisementDataServiceUUIDsKey : [mainService.UUID, autonService.UUID, teleopService.UUID, postgameService.UUID], CBAdvertisementDataLocalNameKey : UIDevice.currentDevice().name])
         }
     }
     
@@ -88,6 +101,10 @@ class SubScoutBluetoothHandler: NSObject, CBPeripheralManagerDelegate {
         if let e = error {
             println("ERROR : \(e)")
         }
+    }
+    
+    func peripheralManager(peripheral: CBPeripheralManager!, central: CBCentral!, didSubscribeToCharacteristic characteristic: CBCharacteristic!) {
+        println("Central: \(central) subscribed to characteristic: \(characteristic)")
     }
 
 }

@@ -10,7 +10,7 @@ import CoreBluetooth
 
 private let _SuperBluetoothInstance = SuperBluetoothHandler()
 
-class SuperBluetoothHandler: NSObject, CBCentralManagerDelegate {
+class SuperBluetoothHandler: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     
     private var manager : CBCentralManager!
     private var shouldStartConnecting : Bool
@@ -69,6 +69,12 @@ class SuperBluetoothHandler: NSObject, CBCentralManagerDelegate {
     func centralManager(central: CBCentralManager!, didConnectPeripheral peripheral: CBPeripheral!) {
         println("Connected to \(peripheral)")
         notificationCenter.postNotificationName("Peripheral Connection", object: nil, userInfo: ["Success" : true])
+        peripheral.delegate = self
+        if data[peripheral] == nil {
+            data[peripheral] = ScoutingData()
+        }
+        println("Searching for services")
+        peripheral.discoverServices([ScoutServices.auton_service, ScoutServices.teleop_service, ScoutServices.postgame_service])
     }
     
     func startConnecting() {
@@ -85,6 +91,16 @@ class SuperBluetoothHandler: NSObject, CBCentralManagerDelegate {
     
     func connectToPeripheral(peripheral: CBPeripheral) {
         manager.connectPeripheral(peripheral, options: nil)
+    }
+    
+    func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
+        println("DISCOVERED SERVICES: ")
+        if let err = error {
+            println("Error discovering services : \(error)")
+        }
+        for service in peripheral.services {
+            println("Discovered service : \(service)")
+        }
     }
     
 }
