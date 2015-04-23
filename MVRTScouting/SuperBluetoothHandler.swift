@@ -94,13 +94,58 @@ class SuperBluetoothHandler: NSObject, CBCentralManagerDelegate, CBPeripheralDel
     }
     
     func peripheral(peripheral: CBPeripheral!, didDiscoverServices error: NSError!) {
-        println("DISCOVERED SERVICES: ")
         if let err = error {
-            println("Error discovering services : \(error)")
+            println("Error discovering services : \(err.localizedDescription)")
         }
         for service in peripheral.services {
-            println("Discovered service : \(service)")
+            println("Discovered service : \(service.UUID)")
+            peripheral.discoverCharacteristics([ScoutServices.auton_characteristic, ScoutServices.teleop_characteristic, ScoutServices.postgame_characteristic], forService: service as! CBService)
         }
+    }
+    
+    func peripheral(peripheral: CBPeripheral!, didDiscoverCharacteristicsForService service: CBService!, error: NSError!) {
+        if let err = error {
+            println("Error discovering services : \(err.localizedDescription)")
+        }
+        for characteristic in service.characteristics {
+            println("Discovered characteristic for service: \(service.UUID)\n\tcharacteristic: \(characteristic.UUID)")
+            if (characteristic.UUID == ScoutServices.auton_characteristic ||
+                characteristic.UUID == ScoutServices.teleop_characteristic ||
+                characteristic.UUID == ScoutServices.postgame_characteristic) {
+                peripheral.setNotifyValue(true, forCharacteristic: characteristic as! CBCharacteristic)
+            }
+        }
+    }
+    
+    func peripheral(peripheral: CBPeripheral!, didUpdateNotificationStateForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+        if let err = error {
+            println("Error subscribing to characteristic : \(err)")
+        }
+        else {
+            println("Subscribed to characteristic : \(characteristic.UUID)")
+        }
+    }
+    
+    func peripheral(peripheral: CBPeripheral!, didUpdateValueForCharacteristic characteristic: CBCharacteristic!, error: NSError!) {
+        let data = characteristic.value
+        if characteristic.UUID == ScoutServices.auton_characteristic {
+            var auton = AutonData()
+            data.getBytes(&auton, length: sizeof(AutonData))
+            self.data[peripheral]?.auton = auton
+        }
+        if characteristic.UUID == ScoutServices.teleop_characteristic {
+            var teleop = TeleopData()
+            data.getBytes(&teleop, length: sizeof(TeleopData))
+            self.data[peripheral]?.teleop = teleop
+        }
+        if characteristic.UUID == ScoutServices.postgame_characteristic {
+            var postgame = PostgameData()
+            data.getBytes(&postgame, length: sizeof(PostgameData))
+            self.data[peripheral]?.postgame = postgame
+        }
+        println(self.data[peripheral]!.auton.cansFromStep)
+        println(self.data[peripheral]!.auton.interferes)
+        println(self.data[peripheral]!.teleop.noodlesToLandfill)
     }
     
 }
